@@ -1,13 +1,40 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .mainFlexItems {
+    @apply flex justify-center items-center;
+  }
+  .mainItems {
+    @apply p-4 bg-white rounded-md font-bold  text-2xl flex justify-center items-center space-x-2 transition-all w-40 lg:w-full;
+  }
+  .mainItems:hover {
+    @apply bg-indigo-900 text-white transition-all shadow-xl shadow-indigo-900;
+  }
+
+  .headerItems {
+    @apply text-base w-28 mt-2 mr-2 rounded-b-none;
+  }
+
+  .labelandinput {
+    @apply flex flex-col w-full space-y-2;
+  }
+  .labelandinput input,
+  textarea {
+    @apply pl-3 border  rounded-md p-2;
+  }
+  .boxHomePage {
+    @apply flex-col w-1/2 p-6 space-y-2 shadow-md rounded-md;
+  }
+  .boxHomePage div {
+    @apply flex-col text-lg space-y-2;
+  }
+  .boxHomePage p {
+    @apply text-gray-500;
+  }
+
+  nav li {
+    @apply hover:underline hover:pb-2 transition-all hover:transition-all;
+  }
 }
